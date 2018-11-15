@@ -50,9 +50,9 @@ function getData() {
                             village = loc.address.village;
                             console.log(city + country);
 
-                            if (city === 'undefined' && village === 'undefined') {
+                            if (!city && !village) {
                                 html = 'The International Space Station is currently above ' + country;
-                            } else if (city === 'undefined') {
+                            } else if (!city) {
                                 html = 'The International Space Station is currently above ' + village + ', ' + country;
                             } else {
                                 html = 'The International Space Station is currently above ' + city + ', ' + country;
